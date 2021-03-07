@@ -49,8 +49,10 @@ public class TrainSystemTest {
 	}
 
 	@Test
-	public void FailingTest() {
-		Assertions.assertTrue(false);
+	public void sanityChecks() {
+		Assertions.assertNotNull(controller);
+		Assertions.assertNotNull(sensor);
+		Assertions.assertNotNull(user);
 	}
 	
 }
