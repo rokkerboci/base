@@ -5,7 +5,7 @@ List:
  - second
  - third
 
-`This is an inline code sample hahi`
+`This is an inline code sample`
 
 ```kotlin
 fun main() {
