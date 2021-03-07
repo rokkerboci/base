@@ -54,5 +54,12 @@ public class TrainSystemTest {
 		Assertions.assertNotNull(sensor);
 		Assertions.assertNotNull(user);
 	}
+
+	@Test
+	public void testTachographRecords() {
+		Assertions.assertTrue(controller.getTachograph().isEmpty());
+		controller.followSpeed();
+		Assertions.assertFalse(controller.getTachograph().isEmpty());
+	}
 	
 }

@@ -2,9 +2,10 @@ dependencies {
     compile project(':train-interfaces')
     compile project(':train-user')
 
+    compile 'org.mockito:mockito-core:2.7.16'
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
-    compile 'org.mockito:mockito-core:2.7.16'
 }
 
 test {
