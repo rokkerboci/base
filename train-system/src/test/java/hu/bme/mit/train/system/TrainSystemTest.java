@@ -48,5 +48,9 @@ public class TrainSystemTest {
 		Assertions.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void FailingTest() {
+		Assertions.assertTrue(false);
+	}
 	
 }
