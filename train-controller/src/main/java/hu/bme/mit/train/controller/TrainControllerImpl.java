@@ -9,7 +9,8 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
-	private final Table<Long, String, Integer> tachographRecords = HashBasedTable.create();
+	private int time = 0;
+	private final Table<Integer, String, Integer> tachographRecords = HashBasedTable.create();
 
 	@Override
 	public void followSpeed() {
@@ -23,6 +24,7 @@ public class TrainControllerImpl implements TrainController {
             }
 		}
 
+		time++;
 		addTachographRecord();
 
 		enforceSpeedLimit();
@@ -52,12 +54,12 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private void addTachographRecord() {
-		tachographRecords.put(System.currentTimeMillis(), "Joystick", step);
-		tachographRecords.put(System.currentTimeMillis(), "Reference speed", referenceSpeed);
+		tachographRecords.put(time, "Joystick", step);
+		tachographRecords.put(time, "Reference speed", referenceSpeed);
 	}
 
 	@Override
-	public Table<Long, String, Integer> getTachograph() {
+	public Table<Integer, String, Integer> getTachograph() {
 		return tachographRecords;
 	}
 

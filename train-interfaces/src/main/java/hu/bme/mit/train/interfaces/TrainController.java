@@ -12,6 +12,6 @@ public interface TrainController {
 
 	void setJoystickPosition(int joystickPosition);
 
-	Table<Long, String, Integer> getTachograph();
+	Table<Integer, String, Integer> getTachograph();
 
 }
